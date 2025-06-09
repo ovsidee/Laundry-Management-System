@@ -5,7 +5,7 @@ using Test2.Services;
 namespace Test2.Controllers;
 
 [ApiController]
-[Route("api/washing-machines")]
+[Route("washing-machines")]
 public class WashingMachinesController : ControllerBase
 {
     public IDbService DbService { get; set; }
