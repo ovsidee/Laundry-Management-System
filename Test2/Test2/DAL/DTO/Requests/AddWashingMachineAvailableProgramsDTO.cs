@@ -1,6 +1,4 @@
-﻿using System.Threading.Channels;
-
-namespace Test2.DAL.DTO.Requests;
+﻿namespace Test2.DAL.DTO.Requests;
 
 public class AddWashingMachineAvailableProgramsDTO
 {
