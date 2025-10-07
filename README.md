@@ -3,8 +3,6 @@
 The **Laundry Management System** is a lightweight RESTful API built with ASP.NET Core and Entity Framework Core.  
 It is designed to manage **customers**, **their purchase history**, and **washing machine inventory** in a structured, consistent, and easily extendable way.  
 
-The system enables you to register new machines with their available programs, record customers’ washing service purchases, and query historical data for analytics or reporting purposes.
-
 ---
 
 ## Table of Contents
@@ -23,8 +21,6 @@ It supports:
 - Registering and configuring washing machines with multiple programs.
 - Tracking purchases, including dates, prices, and customer ratings.
 - Providing structured JSON responses for easy integration with front-end applications or third-party services.
-
-The project follows **RESTful principles**, separating concerns between customers and washing machines, and can be extended to support authentication, reporting dashboards, or mobile app integration.
 
 ---
 
@@ -90,7 +86,7 @@ The project follows **RESTful principles**, separating concerns between customer
     }
   ]
 }
-
+```
 
 ### `POST /api/washing-machines` – Create a new washing machine
 
