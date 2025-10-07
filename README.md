@@ -1,6 +1,6 @@
 # Laundry Management System
 
-A REST API for managing customers, their purchase history, and laundry machines accountancy.
+A REST API for managing customers, their purchase history, and laundry machine accountancy.
 
 ---
 
@@ -22,21 +22,21 @@ A REST API for managing customers, their purchase history, and laundry machines 
 
 ### Customers
 
-| Method | Endpoint                          | Description                               |
-|--------|-----------------------------------|-------------------------------------------|
-| GET    | `/api/customers/{id}/purchases`   | Get purchases of a specified client       |
+| Method | Endpoint                        | Description                             |
+|--------|----------------------------------|-----------------------------------------|
+| GET    | `/api/customers/{id}/purchases` | Get purchases of a specified customer   |
 
 ### Washing Machines
 
-| Method | Endpoint                   | Description                      |
-|--------|----------------------------|----------------------------------|
-| POST   | `/api/washing-machines`    | Create new washing machine      |
+| Method | Endpoint                  | Description                   |
+|--------|---------------------------|-------------------------------|
+| POST   | `/api/washing-machines`   | Create a new washing machine |
 
 ---
 
 ## Example Output
 
-### `GET /api/customers/{id}/purchases` – Get purchases of a specified client
+### `GET /api/customers/{id}/purchases` – Get purchases of a specified customer
 
 ```json
 {
@@ -72,6 +72,11 @@ A REST API for managing customers, their purchase history, and laundry machines 
     }
   ]
 }
+```
+
+### `POST /api/washing-machines` – Create a new washing machine
+
+```json
 {
   "washingMachine": {
     "maxWeight": 9.52,
@@ -92,3 +97,4 @@ A REST API for managing customers, their purchase history, and laundry machines 
     }
   ]
 }
+```
