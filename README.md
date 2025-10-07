@@ -1,20 +1,38 @@
 # Laundry Management System
 
-A REST API for managing customers, their purchase history, and laundry machine accountancy.
+The **Laundry Management System** is a lightweight RESTful API built with ASP.NET Core and Entity Framework Core.  
+It is designed to manage **customers**, **their purchase history**, and **washing machine inventory** in a structured, consistent, and easily extendable way.  
+
+The system enables you to register new machines with their available programs, record customers’ washing service purchases, and query historical data for analytics or reporting purposes.
 
 ---
 
 ## Table of Contents
+- [Overview](#overview)
 - [Tech Stack](#tech-stack)
 - [API Endpoints](#api-endpoints)
 - [Example Output](#example-output)
 
 ---
 
+## Overview
+
+This API acts as the backend for a simple laundry business scenario.  
+It supports:
+- Managing customer records and their interactions with the service.
+- Registering and configuring washing machines with multiple programs.
+- Tracking purchases, including dates, prices, and customer ratings.
+- Providing structured JSON responses for easy integration with front-end applications or third-party services.
+
+The project follows **RESTful principles**, separating concerns between customers and washing machines, and can be extended to support authentication, reporting dashboards, or mobile app integration.
+
+---
+
 ## Tech Stack
-- **ASP.NET Core**
-- **C#**
-- **Entity Framework Core**
+
+- **ASP.NET Core** – for building robust and high-performance REST APIs.  
+- **C#** – the main programming language used throughout the project.  
+- **Entity Framework Core** – for data persistence and interaction with the database using an ORM approach.
 
 ---
 
@@ -22,21 +40,21 @@ A REST API for managing customers, their purchase history, and laundry machine a
 
 ### Customers
 
-| Method | Endpoint                        | Description                             |
-|--------|----------------------------------|-----------------------------------------|
-| GET    | `/api/customers/{id}/purchases` | Get purchases of a specified customer   |
+| Method | Endpoint                        | Description                               |
+|--------|----------------------------------|-------------------------------------------|
+| GET    | `/api/customers/{id}/purchases` | Retrieve all purchase records for a specific customer, including machine and program details. |
 
 ### Washing Machines
 
-| Method | Endpoint                  | Description                   |
-|--------|---------------------------|-------------------------------|
-| POST   | `/api/washing-machines`   | Create a new washing machine |
+| Method | Endpoint                  | Description                              |
+|--------|---------------------------|------------------------------------------|
+| POST   | `/api/washing-machines`   | Register a new washing machine along with its available washing programs. |
 
 ---
 
 ## Example Output
 
-### `GET /api/customers/{id}/purchases` – Get purchases of a specified customer
+### `GET /api/customers/{id}/purchases` – Retrieve customer purchase history
 
 ```json
 {
@@ -72,7 +90,7 @@ A REST API for managing customers, their purchase history, and laundry machine a
     }
   ]
 }
-```
+
 
 ### `POST /api/washing-machines` – Create a new washing machine
 
